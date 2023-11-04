@@ -7,6 +7,16 @@ p {
     margin: 0;
     font-size: 1rem;
 }
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 /* Reset */
 
 
@@ -137,6 +147,16 @@ li { list-style-type: none; }
     align-items: center;
 }
 
+.reservation_input_div.submit {
+    background-color: #012b44;
+    color: white;
+}
+
+.reservation_input_div.submit:active,
+.reservation_input_div.submit:focus {
+    outline: 1px solid rgb(18, 18, 231);
+}
+
 .reservation_input {
     border-radius: 0px;
     padding: 0px;
@@ -183,7 +203,7 @@ li { list-style-type: none; }
     width: 14rem;
     height: 2rem;
     background-color: #012b44;
-    color: #adbbbe;
+    color: #d7dee0;
 }
 
 .conceptimagebox {

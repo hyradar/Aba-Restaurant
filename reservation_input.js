@@ -167,7 +167,7 @@ divPhone.className = 'reservation_input_div';
 divPhone.appendChild(phoneInput);
 
 const divSubmit = document.createElement('div');
-divSubmit.className = 'reservation_input_div';
+divSubmit.className = 'reservation_input_div submit';
 divSubmit.appendChild(submitButton);
 
 // Append the elements to the form
