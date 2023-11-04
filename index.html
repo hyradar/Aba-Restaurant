@@ -32,9 +32,9 @@
             <div class="largeimageright"></div>
         </div>
 
-        <div class="reservation">
+        <div class="reservation" id="reservation">
             <h2>Make a Reservation</h2>
-            <form class="reservation_form" action="process_reservation.php" method="post">
+            <form class="reservation_form" id="reservation_form" action="process_reservation.php" method="post">
 
                 <div class="reservation_input_div">
                     <input class="reservation_input" type="date" id="reservation_date" name="reservation_date" required>
@@ -49,7 +49,7 @@
                 </div>
                 
                 <div class="reservation_input_div">
-                    <input class="reservation_input" type="submit" value="Submit Reservation">
+                    <input class="reservation_input" type="submit" id="submit_button" value="Submit Reservation" disabled="true">
                 </div>
                 
             </form>
