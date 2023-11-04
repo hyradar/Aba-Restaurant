@@ -31,7 +31,10 @@ body {
     width: 70%;
 }
 
-.logo { height: 10rem; }
+.logo {
+    max-height: 10rem; 
+    width: clamp(40%, 95% + 2vw, 100%);
+}
 
 .logodiv {
     display: flex;
@@ -54,7 +57,9 @@ body {
 .navigationdiv {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
-    width: 90%;
+    width: 100%;
+    margin-left: 3rem;
+    margin-left: clamp(2rem, 2rem + 5vw, 4rem);
 
     display: flex;
     justify-content: center;
@@ -104,7 +109,7 @@ li { list-style-type: none; }
 }
 
 .reservation {
-    height: 12rem;
+    height: 8rem;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -122,7 +127,9 @@ li { list-style-type: none; }
 }
 
 .reservation_input_div {
-    height: 1.5rem;
+    height: 2rem;
+    width: 14rem;
+    width: clamp(7rem, 7rem + 5vw, 14rem);
     border: 1px solid grey;
 
     display: flex;
@@ -169,6 +176,7 @@ li { list-style-type: none; }
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     padding: 2em;
+    font-size: clamp(.2rem, .2rem + 2vw, 1rem);
 }
 
 .conceptinfoboxbutton {
@@ -191,24 +199,23 @@ li { list-style-type: none; }
     max-height: 100%;
 }
 
-.conceptimagediv {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: url("./images/firstinfoboximage.jpg");
-}
-
-.conceptimagedivtwo {
-    /* background-size: ; */
-    background-position: center;
-    background-image: url("./images/firstinfoboximage.jpg");
-    height: 100%;
-}
-
+.conceptimagediv,
+.conceptimagedivtwo,
 .thirdconceptimagediv {
     height: 100%;
     background-size: cover;
     background-position: center;
+}
+.conceptimagediv {
+    background-image: url("./images/firstinfoboximage.jpg");
+}
+
+.conceptimagedivtwo {
+    background-size: inherit;
+    background-image: url("./images/firstinfoboximage.jpg");
+}
+
+.thirdconceptimagediv {
     background-image: url("./images/secondinfoboximage.jpg");
 }
 
@@ -217,25 +224,129 @@ li { list-style-type: none; }
     height: 30rem;
     width: 100%;
     overflow: hidden;
+    color: white;
+    font-size: .8rem;
 }
 
 .contactbackgroundimage {
-    display: grid;
     height: 500%;
-    grid-template-columns: 1fr 1fr;
     background-image: url("images/Aba-wood-1.jpg");
     background-size: cover;
     background-position: left;
-    background-repeat: no-repeat;
-    margin-top: 1rem;
-    align-items: flex-start;
-    justify-content: center;
-    color: white;
     filter: grayscale(50%); 
+}
+
+.uppercontactdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .contactinfo {
     margin-top: 3em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.lowercontactdiv {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.footeroptions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: row;
+    height: 14.5rem;
+    width: 80%;
+}
+
+.heading {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 750px) {
+    .headerdiv {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5rem;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .navigationdiv {
+        margin-left: 0px;
+    }
+
+    .logo {
+        width: 100%;
+        max-height: 15rem; 
+    }
+
+    .reservation_form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .reservation {
+        height: 17rem;
+        gap: 1rem;
+    }
+
+    .navlink {
+        font-size: 1.2rem;
+    }
+
+    .reservation_input_div {
+        width: 13rem;
+    }
+
+    .contactinfo {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .conceptboxtwo,
+    .conceptboxone {
+        height: 26rem;
+        align-items: center;
+    }
+
+    .conceptinfobox {
+        height: 70%;
+        min-height: 25rem;
+        border: none;
+        gap: 1.5rem;
+    }
+
+    .thirdconceptimagediv {
+        height: 100%;
+    }
+
+    .footeroptions {
+        align-items:flex-end;
+        justify-content: flex-start;
+        margin-bottom: 200rem;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .contactbackgroundimage {
+        grid-template-columns: 70% 30%;
+    }
+
+    .uppercontactdiv {
+        height: 15%;
+    }
+  }
+
+  @media (max-width: 490px) {
+    .conceptboxtwo,
+    .conceptboxone {
+        margin-top: 7rem;
+    }
 }

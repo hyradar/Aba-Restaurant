@@ -137,7 +137,7 @@ const phoneInput = document.createElement('input');
 phoneInput.className = 'reservation_input';
 phoneInput.type = 'tel';
 phoneInput. pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}";
-phoneInput.placeholder = '1234567890';
+phoneInput.placeholder = '123-456-7890';
 phoneInput.id = 'user_phone_input';
 phoneInput.required = true;
 
