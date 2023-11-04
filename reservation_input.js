@@ -2,8 +2,6 @@
 //Start
 setCurrentDayInCalendar();
 
-
-
 // Date Input Event Listener
 const dateInput = document.getElementById('reservation_date'); 
 dateInput.addEventListener('input', function () {
