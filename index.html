@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Playfair' rel='stylesheet'>
+    <script src="reservation_input.js" defer></script>
     <title>Aba Restaurant</title>
 </head>
 <body>
@@ -32,7 +33,26 @@
         </div>
 
         <div class="reservation">
+            <h2>Make a Reservation</h2>
+            <form class="reservation_form" action="process_reservation.php" method="post">
 
+                <div class="reservation_input_div">
+                    <input class="reservation_input" type="date" id="reservation_date" name="reservation_date" required>
+                </div>
+                
+                <div class="reservation_input_div">
+                    <input class="reservation_input" type="time" id="reservation_time" name="reservation_time" required disabled="true" min="11:00" max="23:00" step="900">
+                </div>
+
+                <div class="reservation_input_div">
+                    <input class="reservation_input" type="number" id="party_size" name="party_size" min="1" max="100" required disabled="true">
+                </div>
+                
+                <div class="reservation_input_div">
+                    <input class="reservation_input" type="submit" value="Submit Reservation">
+                </div>
+                
+            </form>
         </div>
 
         <div class="conceptboxone">
@@ -81,6 +101,7 @@
                         <p>Tues - Thurs 12pm - 10pm</p>
                         <p>Fri 12pm - 1am</p>
                         <p>Sat 11am - 1am</p>
+                        <p>Sun 10am - 9pm</p>
                         <br>
                         <h4>Contact</h4>
                         <br>

@@ -108,8 +108,36 @@ li { list-style-type: none; }
     height: 12rem;
     width: 90%;
     border: 1px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+.reservation_form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation_input_div {
+    height: 1.5rem;
+    border: 1px solid grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation_input {
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-style: none;
+    border: none;
+}
 
 .conceptboxtwo,
 .conceptboxone {
