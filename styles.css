@@ -8,6 +8,10 @@ p {
     font-size: 1rem;
 }
 
+li { 
+    list-style-type: none; 
+}
+
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
@@ -18,7 +22,6 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 /* Reset */
-
 
 body {
     background-image: url("./images/background.jpeg");
@@ -41,6 +44,10 @@ body {
     width: 70%;
 }
 
+.heading {
+    font-size: 1.5rem;
+}
+
 .logo {
     max-height: 10rem; 
     width: clamp(40%, 95% + 2vw, 100%);
@@ -50,6 +57,22 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-left: 3rem;
+    margin-left: clamp(2rem, 2rem + 5vw, 4rem);
+}
+
+.innernavigationdiv { 
+    height: 30%; 
 }
 
 .nav-menu {
@@ -62,35 +85,16 @@ body {
     width: 80%;
 }
 
-.innernavigationdiv { height: 30%; }
-
-.navigationdiv {
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    width: 100%;
-    margin-left: 3rem;
-    margin-left: clamp(2rem, 2rem + 5vw, 4rem);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-li { list-style-type: none; }
-
 .navlink {
     color: inherit;
     text-decoration: none;
 }
 
 .largeimages {
-    /* display: flex; */
     display: grid;
     grid-template-columns: 35% 65%;
     gap: 1em;
     width: 90%;
-    height: 10px;
-    margin: 0 auto; /* Center the content horizontally within the body element */
     margin: 1em 5em;
     height: 30rem;
     overflow: hidden;
@@ -103,13 +107,9 @@ li { list-style-type: none; }
 }
 
 .largeimageleft {
-    
-    height: 100%;
     background-size: 25rem;
-    width: 100%;
     background-image: url("./images/largeimageleft.jpg");
     background-position: bottom ;
-    background-attachment: scroll;
 }
 
 .largeimageright {
@@ -119,12 +119,13 @@ li { list-style-type: none; }
 }
 
 .reservation {
-    height: 8rem;
-    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+    height: 8rem;
+    width: 80%;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
 }
@@ -137,14 +138,14 @@ li { list-style-type: none; }
 }
 
 .reservation_input_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 2rem;
     width: 14rem;
     width: clamp(7rem, 7rem + 5vw, 14rem);
     border: 1px solid grey;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .reservation_input_div.submit {
@@ -165,32 +166,34 @@ li { list-style-type: none; }
     border: none;
 }
 
-.conceptboxtwo,
-.conceptboxone {
+.conceptboxright,
+.conceptboxleft {
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-rows: 20rem;
+
     height: 20rem;
     width: 80%;
     margin-top: 1rem;
-    align-items: center;
-    justify-content: center;
 }
 
-.conceptboxone {
+.conceptboxleft {
     grid-template-columns: 65% 35%;
 }
 
-.conceptboxtwo {
+.conceptboxright {
     grid-template-columns: 35% 65%;
 }
 
 .conceptinfobox {
-    max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     text-align: center;
+    max-height: 100%;
     height: 60%;
     gap: 1em;
     border-top: 1px solid gray;
@@ -256,21 +259,23 @@ li { list-style-type: none; }
     filter: grayscale(50%); 
 }
 
+.contactinfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    margin-top: 3em;
+}
+
 .uppercontactdiv {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.contactinfo {
-    margin-top: 3em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .lowercontactdiv {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    
     width: 100%;
 }
 
@@ -279,12 +284,9 @@ li { list-style-type: none; }
     justify-content: space-evenly;
     align-items: flex-end;
     flex-direction: row;
+    
     height: 14.5rem;
     width: 80%;
-}
-
-.heading {
-    font-size: 1.5rem;
 }
 
 @media (max-width: 750px) {
@@ -330,10 +332,11 @@ li { list-style-type: none; }
         gap: 2rem;
     }
 
-    .conceptboxtwo,
-    .conceptboxone {
-        height: 26rem;
+    .conceptboxright,
+    .conceptboxleft {
         align-items: center;
+        
+        height: 26rem;
     }
 
     .conceptinfobox {
@@ -350,8 +353,9 @@ li { list-style-type: none; }
     .footeroptions {
         align-items:flex-end;
         justify-content: flex-start;
-        margin-bottom: 200rem;
         flex-direction: column;
+
+        margin-bottom: 200rem;
         margin: 0;
     }
 
@@ -365,8 +369,8 @@ li { list-style-type: none; }
   }
 
   @media (max-width: 490px) {
-    .conceptboxtwo,
-    .conceptboxone {
+    .conceptboxright,
+    .conceptboxleft {
         margin-top: 7rem;
     }
 }

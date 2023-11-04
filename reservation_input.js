@@ -59,6 +59,7 @@ timeInput.addEventListener('input', function () {
 
 const party_size_input = document.getElementById('party_size');
 party_size_input.addEventListener('input', function () {
+    
     //If input is valid, enable submit button
     if (this.value > 0 && this.value < 101) {
         const submitButton = document.getElementById('submit_button');
@@ -102,12 +103,13 @@ function isTimeInputValid(timeStr) {
 }
 
 function deleteReservationInputForm() {
-    const div = document.getElementById('reservation'); // Replace 'your_div_id' with your actual div's ID
+    const div = document.getElementById('reservation');
     div.innerHTML = '';
 }
 
 function generateCustomerInformationForm() {
-    // Create the form element
+    
+// Create the form element
 const form = document.createElement('form');
 form.className = 'reservation_form';
 form.addEventListener('submit', function (event) {
@@ -116,7 +118,7 @@ form.addEventListener('submit', function (event) {
     generateReservationSuccessMessage();
 });
 
-// Create the date input element
+// Create the name input element
 const nameInput = document.createElement('input');
 nameInput.className = 'reservation_input';
 nameInput.type = 'text';
@@ -124,7 +126,7 @@ nameInput.placeholder = 'Jane Doe';
 nameInput.id = 'user_name_input';
 nameInput.required = true;
 
-// Create the time input element
+// Create the email input element
 const emailInput = document.createElement('input');
 emailInput.className = 'reservation_input';
 emailInput.type = 'email';
@@ -132,7 +134,7 @@ emailInput.placeholder ='janedoe@gmail.com';
 emailInput.id = 'user_email_input';
 emailInput.required = true;
 
-// Create the party size input element
+// Create the phone input element
 const phoneInput = document.createElement('input');
 phoneInput.className = 'reservation_input';
 phoneInput.type = 'tel';
@@ -147,7 +149,6 @@ submitButton.className = 'reservation_input';
 submitButton.type = 'submit';
 submitButton.id = 'user_submit_button';
 submitButton.value = 'Submit Contact Info';
-// submitButton.disabled = true;
 
 // Create the heading element
 const heading = document.createElement('h2');
@@ -185,6 +186,5 @@ function generateReservationSuccessMessage(){
     const reservationDiv = document.getElementById('reservation');
     const successHeader = document.createElement('h2');
     successHeader.innerText = "Reservation Successful!"
-    
     reservationDiv.appendChild(successHeader)
 }
