@@ -1,6 +1,4 @@
-  
-
-setCurrentDayInCalendar();
+  setCurrentDayInCalendar();
 
 // Time Input Event Listener
 const timeInput = document.getElementById('reservation_time');
@@ -16,7 +14,7 @@ timeInput.addEventListener('input', function () {
 
 // Date Input Event Listener
 const dateInput = document.getElementById('reservation_date'); 
-dateInput.addEventListener('change', function () {
+dateInput.addEventListener('input', function () {
     
     const newDate = formatDate(this.value);
     const dayOfWeek = newDate.getDay();
@@ -25,39 +23,45 @@ dateInput.addEventListener('change', function () {
     const timeInput = document.getElementById('reservation_time');
     timeInput.disabled = false;
 
-    //Update Valid Time Input based on chosen day
+    // Check if input is Monday
+    const validityString = isMondayValidity(dayOfWeek);
+    this.setCustomValidity(validityString);
+    this.reportValidity();
+
     // Reservations must be no later than an hour before close
     switch (dayOfWeek) {
-        case 0: // Sunday
-            // 10am - 9pm
+        case 0: // Sunday: 10am - 8pm
             timeInput.min = "10:00";
             timeInput.max = "20:00";
-        case 1:
-            // Monday
-            //closed
+            break;
+        case 1: // Monday: closed
             timeInput.disabled = true;
             break;
-        case 2: // Tuesday
-        case 3: // Wednesday
-        case 4: // Thursday
-            // 12pm - 10pm
+        case 2: // Tuesday:   12pm - 9pm
+        case 3: // Wednesday: 12pm - 9pm
+        case 4: // Thursday:  12pm - 9pm
             timeInput.min = "12:00";
             timeInput.max = "21:00";
             break;
-        case 5: // Friday
-        // 12pm - 1am
+        case 5: // Friday" 12pm - 12am
         timeInput.min = "12:00";
         timeInput.max = "00:00";
             break;
-        case 6:
-            // Saturday
+        case 6: // Saturday 11am to 12am
             timeInput.min = "11:00";
             timeInput.max = "00:00";
             break;
         default:
             break;
-        }
+    }
 });
+
+function isMondayValidity(input) {
+    if (input !== 1) {
+        return ("");
+    }
+    return ("Mondays are not available for reservations.'");
+}
 
 function formatDate(inputValue) {
     const dateParts = inputValue.split('-');
@@ -75,7 +79,6 @@ function setCurrentDayInCalendar() {
     document.getElementById('reservation_date').setAttribute('min', today);
 }
 
-//Checks if Time Input is Valid
 function isValidTimeInput(timeStr) {
     const regex = /^(?:2[0-3]|[01][0-9]):[0-5][0-9]$/;
     return regex.test(timeStr);
