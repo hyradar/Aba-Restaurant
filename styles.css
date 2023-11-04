@@ -1,5 +1,18 @@
+/* Reset */
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    font-size: 1rem;
+}
+/* Reset */
+
+
 body {
     background-image: url("./images/background.jpeg");
+    font-family: 'Playfair';
 }
 
 .pageflow {
@@ -142,11 +155,6 @@ li { list-style-type: none; }
     height: 100%;
 }
 
-h1,
-p {
-    margin: 0;
-}
-
 .conceptimage {
     background-size: contain;
     height: 20rem;
@@ -193,7 +201,14 @@ p {
     background-position: left;
     background-repeat: no-repeat;
     margin-top: 1rem;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    color: white;
     filter: grayscale(50%); 
+}
+
+.contactinfo {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
