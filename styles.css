@@ -294,16 +294,20 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 5rem;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
     }
 
-    .navigationdiv {
+    .navigation {
         margin-left: 0px;
     }
 
     .logo {
-        width: 100%;
+        width: 70%;
         max-height: 15rem; 
+    }
+
+    .logodiv {
+        justify-content: center;
     }
 
     .reservation_form {
