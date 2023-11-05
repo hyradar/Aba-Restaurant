@@ -1,0 +1,352 @@
+/* Reset */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+button, input[type=submit], input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Reset */
+body {
+  background-image: url("./images/background.jpeg");
+  font-family: "Playfair";
+}
+
+.pageflow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 20% 80%;
+  margin: 1em 5em;
+  width: 70%;
+}
+
+.heading {
+  font-size: 1.5rem;
+}
+
+.logo {
+  max-height: 10rem;
+  width: clamp(40%, 95% + 2vw, 100%);
+}
+
+.logodiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  margin-left: 3rem;
+  margin-left: clamp(2rem, 2rem + 5vw, 4rem);
+}
+
+.innernavigationdiv {
+  height: 30%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  list-style: none;
+  width: 80%;
+}
+
+.navlink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.largeimages {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 1em;
+  width: 90%;
+  margin: 1em 5em;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.largeimageleft,
+.largeimageright {
+  background-repeat: no-repeat;
+}
+
+.largeimageleft {
+  background-size: 25rem;
+  background-image: url("./images/largeimageleft.jpg");
+  background-position: bottom;
+}
+
+.largeimageright {
+  background-size: cover;
+  background-position: center;
+  background-image: url("./images/largeimageright.jpg");
+}
+
+.reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 8rem;
+  width: 80%;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.reservation_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.reservation_input_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 14rem;
+  width: clamp(7rem, 7rem + 5vw, 14rem);
+  border: 1px solid grey;
+}
+
+.reservation_input_div.submit {
+  background-color: #012b44;
+  color: white;
+}
+
+.reservation_input_div.submit:active,
+.reservation_input_div.submit:focus {
+  outline: 1px solid rgb(18, 18, 231);
+}
+
+.reservation_input {
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+  border-style: none;
+  border: none;
+}
+
+.conceptboxright,
+.conceptboxleft {
+  grid-template-rows: 20rem;
+  height: 20rem;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.conceptboxleft {
+  grid-template-columns: 65% 35%;
+}
+
+.conceptboxright {
+  grid-template-columns: 35% 65%;
+}
+
+.conceptinfobox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-height: 100%;
+  height: 60%;
+  gap: 1em;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 2em;
+  font-size: clamp(0.2rem, 0.2rem + 2vw, 1rem);
+}
+
+.conceptinfoboxbutton {
+  width: 14rem;
+  height: 2rem;
+  background-color: #012b44;
+  color: #d7dee0;
+}
+
+.conceptimagebox {
+  height: 100%;
+}
+
+.conceptimage {
+  background-size: contain;
+  height: 20rem;
+  width: 20rem;
+  background-size: 25rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.conceptimagediv,
+.conceptimagedivtwo,
+.thirdconceptimagediv {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.conceptimagediv {
+  background-image: url("./images/firstinfoboximage.jpg");
+}
+
+.conceptimagedivtwo {
+  background-size: inherit;
+  background-image: url("./images/firstinfoboximage.jpg");
+}
+
+.thirdconceptimagediv {
+  background-image: url("./images/secondinfoboximage.jpg");
+}
+
+.contact {
+  margin-top: 6em;
+  height: 30rem;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.contactbackgroundimage {
+  height: 500%;
+  background-image: url("images/Aba-wood-1.jpg");
+  background-size: cover;
+  background-position: left;
+  filter: grayscale(50%);
+}
+
+.contactinfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 3em;
+}
+
+.uppercontactdiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.lowercontactdiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.footeroptions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-direction: row;
+  height: 14.5rem;
+  width: 80%;
+}
+
+@media (max-width: 750px) {
+  .headerdiv {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5rem;
+  }
+  .navigation {
+    margin-left: 0px;
+  }
+  .logo {
+    width: 70%;
+    max-height: 15rem;
+  }
+  .logodiv {
+    justify-content: center;
+  }
+  .reservation_form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .reservation {
+    height: 17rem;
+    gap: 1rem;
+  }
+  .navlink {
+    font-size: 1.2rem;
+  }
+  .reservation_input_div {
+    width: 13rem;
+  }
+  .contactinfo {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
+  .conceptboxright,
+  .conceptboxleft {
+    align-items: center;
+    height: 26rem;
+  }
+  .conceptinfobox {
+    height: 70%;
+    min-height: 25rem;
+    border: none;
+    gap: 1.5rem;
+  }
+  .thirdconceptimagediv {
+    height: 100%;
+  }
+  .footeroptions {
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 200rem;
+    margin: 0;
+  }
+  .contactbackgroundimage {
+    grid-template-columns: 70% 30%;
+  }
+  .uppercontactdiv {
+    height: 15%;
+  }
+}
+@media (max-width: 490px) {
+  .conceptboxright,
+  .conceptboxleft {
+    margin-top: 7rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
