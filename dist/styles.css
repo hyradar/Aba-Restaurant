@@ -36,10 +36,10 @@ body {
 }
 
 .headerdiv {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 80%;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 20% 80%;
   margin: 1em 5em;
   width: 70%;
 }
@@ -128,7 +128,7 @@ body {
 }
 
 .reservation_form {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
@@ -164,6 +164,9 @@ body {
 
 .conceptboxright,
 .conceptboxleft {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-rows: 20rem;
   height: 20rem;
   width: 80%;
