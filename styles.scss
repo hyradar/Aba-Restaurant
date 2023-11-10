@@ -26,7 +26,7 @@ button, input[type="submit"], input[type="reset"] {
 /* Reset */
 
 body {
-    background-image: url("./images/background.jpeg");
+    background-image: url("images/background.jpeg");
     font-family: 'Playfair';
 }
 
@@ -104,14 +104,14 @@ body {
 
 .largeimageleft {
     background-size: 25rem;
-    background-image: url("./images/largeimageleft.jpg");
+    background-image: url("images/largeimageleft.jpg");
     background-position: bottom ;
 }
 
 .largeimageright {
     background-size: cover;
     background-position: center;
-    background-image: url("./images/largeimageright.jpg");
+    background-image: url("images/largeimageright.jpg");
 }
 
 .reservation {
@@ -216,16 +216,16 @@ body {
     background-position: center;
 }
 .conceptimagediv {
-    background-image: url("./images/firstinfoboximage.jpg");
+    background-image: url("images/firstinfoboximage.jpg");
 }
 
 .conceptimagedivtwo {
     background-size: inherit;
-    background-image: url("./images/firstinfoboximage.jpg");
+    background-image: url("images/firstinfoboximage.jpg");
 }
 
 .thirdconceptimagediv {
-    background-image: url("./images/secondinfoboximage.jpg");
+    background-image: url("images/secondinfoboximage.jpg");
 }
 
 .contact {

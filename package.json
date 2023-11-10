@@ -1,5 +1,8 @@
 {
-  "dependencies": {
+  "devDependencies": {
     "sass": "^1.69.5"
-  }
+  },
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded styles.scss:dist/styles.css"
+  }  
 }
